@@ -12,6 +12,9 @@
             var sentArray = sentence.split(' ');
             var out = "";
             out += `Your sentence is ${sentArray.length} words long.`;
+            out += "<br>";
+            out += "This is your sentence in alphabetical order: "
+            out += `${sentArray.sort().join(' ')}`;
             document.getElementById('div2').innerHTML = `<p> ${out} </p>`;       
         }
     </script>
