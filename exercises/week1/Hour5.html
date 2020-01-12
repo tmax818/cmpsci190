@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hour Five</title>
+    <script>
+        function wrangleArray() {
+            var sentence = prompt("Please enter a sentence.");
+            document.getElementById('div1').innerHTML = `<p> ${sentence} </p>`
+            var sentArray = sentence.split(' ');
+            var out = "";
+            out += `Your sentence is ${sentArray.length} words long.`;
+            document.getElementById('div2').innerHTML = `<p> ${out} </p>`         
+        }
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+        wrangleArray();
+    </script>
+</body>
+</html>
