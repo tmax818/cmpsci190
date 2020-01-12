@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hour Four</title>
+    <style>
+        p {
+            font: 14px normal arial, verdana, helvetica;
+        }
+    </style>
+        <script>
+            function telltime() {
+                var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                var out = "";
+                var now = new Date();
+                out += now.getDay();
+                out += " ";
+                out += months[now.getMonth()];
+                out += " ";
+                out += now.getFullYear();
+                out += " ";
+                out += now.getHours();
+                out += ":";
+                out += now.getMinutes();
+    
+
+                document.getElementById('div1').innerHTML = out;
+    
+    
+            }    
+        </script>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        telltime()
+    </script>
+    <input type="button" onclick="location.reload()" value="Refresh">
+</body>
+</html>
