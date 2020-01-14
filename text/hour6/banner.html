@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Banner Cycler</title>
+    <script>
+        var banners = ["banner1.jpg", "banner2.jpg", "banner3.jpg"];
+        var counter = 0;
+        function run() {
+            setInterval(cycle, 2000);
+        }
+
+        function cycle() {
+            counter++;
+            if(counter == banners.length) counter = 0;
+            document.getElementById('banner').src = banners[counter];
+        }
+    </script>
+</head>
+<body onload="run();">
+    <img id="banner" src="banner1.jpg" alt="banner">
+    
+</body>
+</html>
