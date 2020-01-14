@@ -368,7 +368,183 @@ cube(3);
 
 ## Try it Yourself: Displaying Info Using the navigator Object
 
-- [navigator.html](navigator.html)
+- [navigator.html](navigator.html) - this is cool
+
+## Dates and Times
+
+- Date object is created when needed and not part of the DOM.
+- Each Date object can represent different dates and times.
+
+### Create a Date Object with Current Date and Time
+
+- `var mydate = new Date();`
+- mydate is an object containing info about the date and time it was created
+- Date object methods:
+  - var year = mydate.getFullYear(); // four-digit year
+  - var month = mydate.getMonth(); // month numbers
+  - var date = mydate.getDate(); //day of the month
+  - var day = mydate.getDay(); //day numbers
+  - var hours = mydate.getHours(); hours part of time
+  - var minutes = mydate.getMinutes(); // minutes part of time
+  - var seconds = mydate.getSeconds(); // seconds part of time
+
+### Creating a Date Object witha a Given Date and Time
+
+- this is done by passing arguments to the Date() statement.
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), MDN uses React!
+
+### Setting and Editing Dates and Times
+
+- Date object has methods for setting and editing. Check out MDN link above
+
+## Simplifying Calculations with the `Math` Object
+
+- Math object methods can be called directly
+
+### Rounding
+
+- `ceil()`, `floor()`, and `round()` are used for truncating decimal parts of numbers.
+
+### Finding Minimum and Maximum
+
+- use `min()` and `max()`
+
+### Random Numbers
+
+- `Math.random()` generates a random number between 0 and 1.
+- function for generating a random integer between 0 and r:
+
+~~~javascript
+function myRand(r) {
+  return Math.round(Math.randome() * r);
+}
+~~~
+
+### Mathematical Constants
+
+|Costant| Description|
+|:----:|----:|
+|E|Base of natural logs ~2.718|
+|LN2|Natural log of 2|
+|LN10|Natural log of 10|
+|LOG2E|Base 2 log of E|
+|LOG10E|base 10 log of E|
+|PI|You know, pi!! ~3.14159|
+
+## The `with` Keyword
+
+- can be used with any object
+- `with` takes an object as an argument followed by a code block in braces.
+
+~~~javascript
+
+with (Math) {
+  var rand = random();
+  var biggest = max(3,4,5)
+}
+~~~
+
+## Try it Yourself: Reading the Date and Time
+
+- let completed exercise suffice for now
+
+## Summary
+
+- built-in JS objects
+- window objects modal dialogs
+- `document.getElementById()` method
+
+# Hour 5. Different Types of Data
+
+## Numbers
+
+### Integers
+
+### Floating-Point Numbers
+
+### Not a Number (NaN)
+
+### Using `parseFloat()` and `parseInt()`
+
+### Infinity
+
+## Strings
+
+### Escape Sequences
+
+### String Methods
+
+#### concat()
+#### indexOf()
+#### lastIndexOf()
+#### replace()
+#### split()
+#### substr()
+#### toLowerCase() and toUpperCase()
+
+## Boolean Values
+
+## The Negation Operator (!)
+
+## Arrays
+
+### Creating a New Array
+
+### Initializing an Array
+
+### array.length
+
+### Array Methods
+
+#### concat()
+#### join()
+#### toString()
+#### indexOf()
+#### lastIndexOf()
+#### slice()
+#### sort()
+#### splice()
+
+## Summary
+
+- data types
+- string and array methods.
+- This is the end of part one.
+
+# Part II: More Advanced JavaScript
+
+# Hour 6. Scripts That Do More
+
+## Conditional Statements
+
+- conditional statements - used to detect conditions arising in the values of variables in a script.
+
+## The `if()` Statement
+
+- general form:
+  - if(this condition is true) then do this;
+- test for false:
+  - if(!true) then do this;
+
+## Comparison Operators
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
