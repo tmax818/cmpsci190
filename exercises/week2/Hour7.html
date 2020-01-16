@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Card</title>
+    <script>
+        function Card() {
+            this.suit = '';
+            this.face = '';
+            this.setSuit = function(newSuit){
+                this.suit = newSuit;
+            }
+            this.setFace = function(newFace) {
+                this.face = newFace;
+            }
+        }
+        function makeCard(suit, face){
+            var newCard = new Card()
+            newCard.setSuit(suit);
+            newCard.setFace(face);
+            var out = `Your card is the ${newCard.face} of ${newCard.suit}!`;
+            document.getElementById('card').innerHTML = out;
+
+        }
+    </script>
+</head>
+<body>
+    <label for="suit">Suit (diamonds, hearts, spades or clubs)</label> 
+    <input id="suit" type="text">
+    <br>
+    <label for="face">Face (Ace, 1, 2, 3, 4 ... , King, Queen or Jack)</label>
+    <input id="face" type="text">
+ <br>
+    <input type="button" value="New Card" onclick="makeCard(suit.value, face.value)">
+
+    <div id="card"></div>
+</body>
+</html>
