@@ -27,14 +27,37 @@
     </script>
 </head>
 <body>
-    <label for="suit">Suit (diamonds, hearts, spades or clubs)</label> 
-    <input id="suit" type="text">
-    <br>
-    <label for="face">Face (Ace, 1, 2, 3, 4 ... , King, Queen or Jack)</label>
-    <input id="face" type="text">
- <br>
-    <input type="button" value="New Card" onclick="makeCard(suit.value, face.value)">
 
+
+    <label for="suit">Choose a suit:</label>
+    <select name="" id="suit">
+        <option value="Diamonds">Diamonds</option>
+        <option value="Hearts">Hearts</option>
+        <option value="Spades">Spades</option>
+        <option value="clubs">Clubs</option>
+    </select>
+    <br>
+    <label for="face">Choose a face:</label>
+    <select name="" id="face">
+        <option value="Ace">Ace</option>
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+        <option value="Four">Four</option>
+        <option value="Five">Five</option>
+        <option value="Six">Six</option>
+        <option value="Seven">Seven</option>
+        <option value="Eight">Eight</option>
+        <option value="Nine">Nine</option>
+        <option value="Ten">Ten</option>
+        <option value="Jack">Jack</option>
+        <option value="Queen">Queen</option>
+        <option value="King">King</option>
+    </select>
+
+    <br>
+    <input type="button" value="New Card" onclick="makeCard(suit.value, face.value)">
+    <br>
     <div id="card"></div>
 </body>
 </html>
