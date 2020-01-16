@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canceling Default Behavior</title>
+</head>
+<script>
+    function checkform() {
+        document.getElementById('form1').onsubmit = function() {
+            var allowSubmit = true;
+            if(document.getElementById('user').value === '') {
+                alert("Name field cannot be blank");
+                allowSubmit = false;
+            }
+            if(document.getElementById('phone').value === '') {
+                alert("Phone field cannot be blank");
+                allowSubmit = false;
+            }
+            if(allowSubmit) alert("Data OK - submitting form");
+            return allowSubmit;
+        }
+    }
+    window.onload = checkform;
+</script>
+<body>
+    <form id="form1">
+        Name: <input type="text" value="" name="username" id="user">
+        Phone: <input type="text" value="" name="telephone" id="phone">
+        <input type="submit">
+    </form>
+</body>
+</html>
