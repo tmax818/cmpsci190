@@ -12,6 +12,68 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -22,11 +84,42 @@
 <h1 class="title">Week Two</h1>
 </header>
 <ol type="1">
-<li><p>In your own words, what is an if() statement and what is an if() statement used for? (2 points)</p></li>
-<li><p>What are the types of loop statements discussed in Hour 7? Are these loop statements functionally equivalent meaning, do all of the loop statements do the same thing? (3 points)</p></li>
-<li><p>Hours 1 through 6 of the textbook introduced us to the procedural programming paradigm—where computer programs are written as a set of instructions which are performed in sequence, to achieve a goal or solve a problem. Hour 7 introduces us to the Object Oriented Programming paradigm—where objects are created to encapsulate data and methods and programs are written to manipulate those objects and their properties. Which of these two paradigms do you prefer, and why? (10 points)</p></li>
-<li><p>In your own words, what makes JSON useful? (3 points)</p></li>
-<li><p>In your own words, describe how you would make sure you always have a valid event object to examine. (2 points)</p></li>
+<li>In your own words, what is an if() statement and what is an if() statement used for? (2 points)</li>
 </ol>
+<p>An <code>if()</code> statement is an indespensable means to the construction of more complex and useful applications. It allows a programmer to control the flow of code execution based on conditions such as user input or events. It can be likened to a fork in a road or in more complex applications, like a freeway interchange.</p>
+<ol start="2" type="1">
+<li>What are the types of loop statements discussed in Hour 7? Are these loop statements functionally equivalent meaning, do all of the loop statements do the same thing? (3 points)</li>
+</ol>
+<p>The loop statements disucssed in Hour 6 are the following:</p>
+<ul>
+<li><code>while</code>- This is loop will repeatedly execute the statements in its body as long as the condition is true.</li>
+<li><code>do ... while</code> - This loop is the same as the <code>while</code> loop except it will always execute at least once.</li>
+<li><code>for</code> - This loop is like the while loop except for the way the intitial condition, test condition and iteration condition are specified.</li>
+<li><code>for ... in</code> - This loop is only for iteration through the properties of an object or members of an array.</li>
+</ul>
+<p>All the loop structures above are “functionally equivalent” in that they all used for repetative actions. The circumstances in which they are used and the ways they function differ.</p>
+<ol type="1">
+<li>Hours 1 through 6 of the textbook introduced us to the procedural programming paradigm—where computer programs are written as a set of instructions which are performed in sequence, to achieve a goal or solve a problem. Hour 7 introduces us to the Object Oriented Programming paradigm—where objects are created to encapsulate data and methods and programs are written to manipulate those objects and their properties. Which of these two paradigms do you prefer, and why? (10 points)</li>
+</ol>
+<p>In answering this question, I must begin with a confession: I am in love with Ruby and Python. These are the first langauges I learned and I don’t think I could have learned to code without them. Both are languages that allow for both procedural and object oriented paradigms. However, both lean toward implementation of an object oriented approach and are more powerful when used in that way.</p>
+<p>The object oriented paradigm is much clearer and easier to understand. This is a simple, but illustrative example. Determining if a number is even or odd in the procedural paradigm would be the same in most languages:</p>
+<pre><code>num % 2 == 0</code></pre>
+<p>The result of this expression determines whether the value stored in <code>num</code> is even or odd, the result will be true or false, respectively. In Ruby where everything, includeing numbers, are objects, the syntax reads much more like a natural langague like English. This is the same expression in Ruby:</p>
+<pre><code>num.even?</code></pre>
+<p>In Ruby, a number “knows” whether it is even, odd or a host of other facts. In Ruby, you are in essence asking a number if it is even and it answers you.</p>
+<p>Another reason I prefer the obect oriented paradigm is related to my number example. OOP is more in keeping with the way the “real world” actually works. At least it is more in keeping with the way humans mentally interact with the world. The world consists of “objects” like cars, numbers, shopping carts and bank accounts. The fact that 3 is odd is an enherent fact about the number 3.</p>
+<ol start="4" type="1">
+<li>In your own words, what makes JSON useful? (3 points)</li>
+</ol>
+<p>JSON is useful for several reasons. JSON allows the use of associative arrays that are a useful feature of other programming languages(in Python and Ruby associatve arrays are known as Dictionaries and Hashes, respectively). JSON is the syntax for the creation of object literals in JavaScript. Most progamming languages and web frameworks have a means of parsing serialized JSON data. JSON has become the de facto means of transmitting data via a netork. NoSql databases such as Mongo and CouchDB use JSON syntax to store data. These databases are much more intuitive to work with in that JSON is really an associative array.</p>
+<ol start="5" type="1">
+<li>In your own words, describe how you would make sure you always have a valid event object to examine. (2 points)</li>
+</ol>
+<p>It seems that the default behavior in most browsers is to pass an <code>event</code> object to an event handler function. Whereas, Microsoft’s browsers create a property on the <code>window</code> object (namely, <code>window.event</code>) that contains the information about the event. This seems to me like an auto maker decideing to put their car’s gas pedal in the trunk, but I digress.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">var</span> theElement <span class="op">=</span> <span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&#39;theId&#39;</span>).<span class="at">onclick</span> <span class="op">=</span> <span class="kw">function</span>(e) <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="cf">if</span>(<span class="op">!</span>e) <span class="kw">var</span> e <span class="op">=</span> <span class="va">window</span>.<span class="at">event</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="kw">var</span> element <span class="op">=</span> (<span class="va">e</span>.<span class="at">target</span>) <span class="op">?</span> <span class="va">e</span>.<span class="at">target</span> : <span class="va">e</span>.<span class="at">srcElement</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="op">}</span></span></code></pre></div>
+<p>In order to make sure there is always a valid event object to examine, a means of checking for the event object in the event handler function must be created. The line <code>if(!e) var e = window.event</code> checks to see if an arument was passed. If no argument was passed(i.e. !e === true), the event must be assigned to the <code>window.event</code> object created in Internet Explorer(IE). This step ensures that the ternary expression does not produce an error. If e was passes as an argument by the browser, then <code>e.target</code> will exist and the ternary operator simply assigns e.target to a variable. If e was set to <code>window.event</code> in the previous line the variable is set to <code>window.event.srcElement</code> created by IE.</p>
 </body>
 </html>
