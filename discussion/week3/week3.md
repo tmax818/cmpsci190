@@ -4,9 +4,9 @@ title: Week Three
 
 1. If you have Firefox, download and install the DOM Inspector and familiarize yourself with its interface. Use the program to investigate the DOM of some of your favorite web pages.  Did you notice any similarities or differences?  Briefly discuss your findings.  NOTE: Since most web browsers have built-in DOM inspection tools, you should be able to do your inspection with any other browser. (5 points).
 
-I perused several websites with the 'inspect' window open in Chrome. I also have the React Developer Tools Chrome Extension installed. One thing I noticed with sites that use React verses thoese that don't is that the React sites seem to have a large number of script tags in their head setions. It was also very interesting to see how many websites are using AWS. 
+I perused several websites with the 'inspect' window open in Chrome. I also have the React Developer Tools Chrome Extension installed. One thing I noticed with sites that use React verses those that don't is that the React sites seem to have a large number of script tags in their head sections. It was also very interesting to see how many websites are using AWS. 
 
-I found this exercise endlessly facinating. I learned that I have a lot to learn about HTML and how it works.
+I found this exercise endlessly fascinating. I learned that I have a lot to learn about HTML and how it works.
 
 The most interesting one I found was this:
 
@@ -16,13 +16,13 @@ Kahn Academy puts an advertisement that they are hiring developers in an HTML co
 
 2. The textbook states that JavaScript does not work well with CSS style rules in cross-browser situations.  In your own words, why is this true?  (5 points)
 
-The 'C' in CSS stands for cascading. All browsers have default CSS settings that are applied automatically. These default settings can override styles that the developer creates given that styles are applied in a "cascading" manner. NPM ools such as [Normalize.css](https://necolas.github.io/normalize.css/) can and should be used to ensure that styling is rendered as entended by the developer in different browsers. 
+The 'C' in CSS stands for cascading. All browsers have default CSS settings that are applied automatically. These default settings can override styles that the developer creates given that styles are applied in a "cascading" manner. NPM tools such as [Normalize.css](https://necolas.github.io/normalize.css/) can and should be used to ensure that styling is rendered as intended by the developer in different browsers. 
 
 3. Hour 14  covers the topic of Good Coding Practice.  In your opinion, would it have made it easier to learn JavaScript if this topic had been presented earlier in the textbook?  As a JavaScript programmer, what information in Hour 14 is most valuable to you?  (5 points)
 
-I believe that the tips given in Hour 14 would not make sense to someone learning JavaScript as their first langauge. One thing I think the author could have done better would have been to not violate this advice in presenting topics. To this point it has been rare that he has seperated JavaScript code into a separate file. 
+I believe that the tips given in Hour 14 would not make sense to someone learning JavaScript as their first language. One thing I think the author could have done better would have been to not violate this advice in presenting topics. To this point it has been rare that he has separated JavaScript code into a separate file. 
 
-I found the section on `try catch` and the use of `<noscript>` tags the most valueable.  
+I found the section on `try catch` and the use of `<noscript>` tags the most valuable.  
 
 4. In your own words, explain the technique of preloading images for animations.  (5 points)
 
@@ -38,4 +38,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 ~~~
 
-despite the order of the functions in the script, the second one always executes first in my Chrome browser. Upon refreshing the page, the event listner on `DOMContentLoaded` executes noticably faster. If you are viewing this comment on my [website]() you can open a console and hit refresh to see my demo.
+despite the order of the functions in the script, the second one always executes first in my Chrome browser. Upon refreshing the page, the event listener on `DOMContentLoaded` executes noticeably faster. If you are viewing this comment on my [website](http://www.tylermaxwell.co/cmpsci190/discussion/week3/index.html) you can open a console and hit refresh to see my demo.
