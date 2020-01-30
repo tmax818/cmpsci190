@@ -24,7 +24,9 @@ function responseAjax() {
             var now = new Date();
             var localTime = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
             var serverTime = myRequest.responseText;
-            console.log(myRequest)
+            console.log(myRequest.responseText);
+            console.log(myRequest.responseAjax);
+
             document.getElementById("clock").innerHTML = "Server: " + serverTime + "<br />Local: " + localTime;
         } else {
             alert("An error has occurred: " + myRequest.statusText);
