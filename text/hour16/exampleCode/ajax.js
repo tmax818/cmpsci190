@@ -12,7 +12,7 @@ function getXMLHttpRequest() {
     }
 }
 function callAjax() {
-    var url = "clock.php";
+    var url = "http://ec2-18-188-242-78.us-east-2.compute.amazonaws.com/clock.php";
     var myRandom = parseInt(Math.random() * 99999999);
     myRequest.open("GET", url + "?rand=" + myRandom, true);
     myRequest.onreadystatechange = responseAjax;
