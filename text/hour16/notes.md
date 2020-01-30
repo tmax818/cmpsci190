@@ -76,5 +76,36 @@ var request = new XMLHttpRequest();
 
 ## Sending the Server Request
 
+- write [callAjax()]()
+
+## Dealing with the Browser Cache
+
+- add a parameter with random data to generate a new HTTP request rather than pull from browser cache.
+
+## Monitoring Server Status
+
+- must monitor an ajax requests status
+
+## The `readyState` Property
+
+- property of the ajax object that gives info from the server about the state of a request.
+- has values 0 through 4
+
+## Server Response Status Codes
+- 200 is okay
+
+## Callback Functions
+
+- you know girl
+
+## `responseText` and `responseXML` Properties
+
+- these properties contain text and xml of the data returned by the server.
+- `responseText` represents the data as a string that is read-only
+- `responseXML` 
 
 
+
+## Try It Yourself: An Ajax Clock
+
+- 
