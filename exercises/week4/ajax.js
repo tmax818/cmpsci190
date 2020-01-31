@@ -10,6 +10,7 @@ function getXMLHttpRequest() {
     catch (e) {
         return new XMLHttpRequest();
     }
+
 }
 function callAjax() {
     var url = "http://ec2-18-188-242-78.us-east-2.compute.amazonaws.com/clock.php";
@@ -17,15 +18,14 @@ function callAjax() {
     myRequest.open("GET", url + "?rand=" + myRandom, true);
     myRequest.onreadystatechange = responseAjax;
     myRequest.send(null);
+  
 }
 function responseAjax() {
     if (myRequest.readyState == 4) {
         if (myRequest.status == 200) {
             var now = new Date();
             var localTime = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-            var serverTime = myRequest.responseText;
-            console.log(typeof(myRequest.responseText));
-            console.log(myRequest.responseText);
+            var serverTime = myRequest.responseText
 
             document.getElementById("clock").innerHTML = "Server: " + serverTime + "<br />Local: " + localTime;
         } else {
@@ -35,3 +35,7 @@ function responseAjax() {
 }
 var myRequest = getXMLHttpRequest();
 console.log(myRequest.readyState)
+
+setInterval(() => {
+    callAjax()
+}, 900);
