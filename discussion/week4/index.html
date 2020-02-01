@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Week Four</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Week Four</h1>
+</header>
+<ol type="1">
+<li>In your own words, discuss the difference between Ajax GET and POST requests. (3 points).</li>
+</ol>
+<p>Ajax GET and POST requests are two ways the browser(i.e. client) can interact with a server. GET requests are more common than POST requests. Every time a browser visits a new website, a GET request is sent to a server asking for the content of the website whether the site is static or dynamic with linked back end functionality. A POST request is a request to actually manipulate or change data stored on the back end usually in a database. Common examples of POST requests would be adding content to social media. Every tweet on Twitter is an example of a POST request sent to Twitter’s back end.</p>
+<ol start="2" type="1">
+<li>The Hour 17 ajax library doesn’t currently do very much to detect and act upon errors. How could you modify it to react to a req.status of other than 200? (5 points)</li>
+</ol>
+<p>HTTP status codes are grouped by hundreds: codes between 200 and 299 means success, 300 to 399 means redirection, 400 to 499 is a client error and codes in the 500s is a server error.</p>
+<p>This situation seems to lend itself to the use of relational operators. A conditional structure(i.e. a switch statement) could be implemented that would execute code based on whether a status code was greater than 299 or less than 500.</p>
+<ol start="3" type="1">
+<li>In your own words, describe what Firebug is and what it can be used for? (5 points)</li>
+</ol>
+<p>Firebug is a FireFox plugin that has not been in use since 2017. All the functionality that Firebug had has been implemented in Mozilla’s Browser for developers. The functionality Firebug pioneered is now available in most browsers under the developer tools functions.</p>
+<ol start="4" type="1">
+<li>Visit the Script.aculo.us page at http://script.aculo.us/ (Links to an external site.) and review the complete list of effects made available by this library. Which 3 effects are most interesting to you? (3 points)</li>
+</ol>
+<p>I love the fact that the effects are prepackaged in Ruby on Rails. I love building Rails apps and I can’t wait to use this. I think the shopping card, auto complete and sortable lists would be the most useful.</p>
+</body>
+</html>
