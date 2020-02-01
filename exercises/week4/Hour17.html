@@ -13,17 +13,23 @@
         window.onload = function () {
             document.getElementById("btn1").onclick = function () {
                 var url = document.getElementById("txt1").value;
-                doAjax("metatags.php", "url=" + url, "display", "post", 0);
+                doAjax("http://ec2-18-188-242-78.us-east-2.compute.amazonaws.com/metatags.php", "url=" + url, "display", "post", 0);
             }
         }
     </script>
     </head>
     
     <body>
-        http://<input type="text" id="txt1" value="" />
+        http://
+        <input type="text" id="txt1" value="" placeholder="type example.com!!!" />
         <input type="button" id="btn1" value="Get Keywords" />
         <h3>Keywords Received:</h3>
         <div id="displaydiv"></div>
+
+        <hr>
+
+        <p>Please use example.com so this works. I modified the php script so that viewort is returned</p>
+
     </body>
     
     </html>

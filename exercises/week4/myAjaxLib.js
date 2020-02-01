@@ -15,9 +15,18 @@ function getXMLHttpRequest() {
 function doAjax(url, query, callback, reqtype, getxml) {
     var myreq = getXMLHttpRequest();
     myreq.onreadystatechange = function () {
-        if (myreq.readyState == 4) {
+        console.log(query)
+        console.log(myreq.readyState);
+        if(myreq.readyState === 1) alert("loading...");
+        if(myreq.readyState === 2) alert("loaded...");
+        if(myreq.readyState === 3) alert("interactive...Not sure what that means!!!!");
+        
+
+        if (myreq.readyState === 4) {
             if (myreq.status == 200) {
+                console.log(myreq.status);
                 var item = myreq.responseText;
+                console.log(item);
                 if (getxml == 1) item = myreq.responseXML;
                 eval(callback + '(item)');
             }
@@ -31,6 +40,7 @@ function doAjax(url, query, callback, reqtype, getxml) {
 }
 
 function requestGET(url, query, req) {
+    console.log(url)
     var myRandom = parseInt(Math.random() * 99999999);
     if (query == '') {
         var callUrl = url + '?rand=' + myRandom;
@@ -42,6 +52,8 @@ function requestGET(url, query, req) {
 }
 
 function requestPOST(url, query, req) {
+    console.log(url)
+    console.log(query)
     req.open("POST", url, true);
     req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     req.send(query);
