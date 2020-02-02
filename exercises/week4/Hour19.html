@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="prototype.js"></script>
+    <style>
+    .red {
+        color: red;
+    }
+    div {
+        width: 400px;
+        border: solid;
+        border-color: red;
+    }
+    </style>
+    <title>Prototype</title>
+</head>
+<body>
+    <h1>Click the items to turn them red!</h1>
+<div id="items">
+    <ul>
+        <li>lorem</li>
+        <li>ipsum</li>
+        <li>dolor</li>
+    </ul>
+</div>
+
+ <p id='dwidth'>The width of div above is </p>
+
+
+<script>
+    $('items').on('click', 'li', function (event, element) {
+        element.addClassName('red')
+    });
+    var wid = $('items').getStyle('width');
+
+    $('dwidth').innerHTML += wid.toString()
+</script>
+</body>
+</html>
