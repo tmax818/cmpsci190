@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hour 22</title>
+	<title>Using Embedded Objects</title>
+	<script>
+		function flashLoaded(theMovie) {
+			if (typeof(theMovie) != "undefined") {
+				return theMovie.PercentLoaded() == 100;
+			} else {
+				return false;
+			}
+		}
+		function play(){
+			if (flashLoaded(document.getElementById('demo')) &&
+				!document.getElementById('demo').IsPlaying()){
+					document.getElementById('demo').Play();
+			}
+		}
+		function stop(){
+            console.log('stop')
+			if (flashLoaded(document.getElementById('demo')) &&
+				document.getElementById('demo').IsPlaying()){
+					document.getElementById('demo').StopPlay();
+			}
+		}
+		function rewind(){
+			stop();
+			if (document.getElementById('demo').Rewind()) {
+				document.getElementById('demo').Rewind();
+			}
+        }
+        function zoomIn(){
+			document.getElementById('demo').Zoom(50);
+        }
+        
+        function zoomOut(){
+			document.getElementById('demo').Zoom(500);
+		}
+		window.onload = function() {
+            var demo = document.getElementById("demo");
+			document.getElementById("play").onclick = play;
+			document.getElementById("stop").onclick = stop;
+            document.getElementById("rewind").onclick = rewind;
+            document.getElementById("zoomIn").onclick = zoomIn;
+            document.getElementById("zoomOut").onclick = zoomOut;
+		}
+	</script>
 </head>
 <body>
-    <p>Instructions: Modify the code of Listing 22.1 to include buttons to increase and decrease the video Zoom level [Hint: Use the
-    Zoom(percent) property listed in Table 22.3.]</p>
+	<embed id="demo" name="demo"
+		src="example.swf"
+		width="318" height="300" play="false" loop="false"
+		pluginspage="http://www.macromedia.com/go/getflashplayer"
+		swliveconnect="true">
+	</embed>
+	<form name="form" id="form">
+		<input id="play" type="button" value="Start" />
+		<input id="stop" type="button" value="Stop" />
+        <input id="rewind" type="button" value="Rewind" />
+        <input id="zoomIn" type="button" value="Zoom In" />
+        <input id="zoomOut" type="button" value="Zoom Out" />
+	</form>
 </body>
 </html>
