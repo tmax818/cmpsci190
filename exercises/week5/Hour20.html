@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
     <title>Hour 20</title>
 </head>
 <body>
-    <p>Instructions: Review some of the example programs from earlier in the book. Pick at least two to rewrite using jQuery and try to do
-    so.</p>
+    <div>
+        <p>Instructions: Review some of the example programs from earlier in the book. Pick at least two to rewrite using jQuery and try to do
+            so.</p>
+    </div>
+
+
+    <h1>Hour 13</h1>
+    <div id="id1" class="classA"> An element with a touch of class.</div>
+	<input type="button" id="btn1" value="Toggle" />
+  
+
+
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                $("#id1").toggleClass("classB", "classA");
+            });
+            
+
+        });
+		// function toggleClass() {
+		// 	var myElement = document.getElementById("id1");
+		// 	if(myElement.className == "classA") {
+		// 		myElement.className = "classB";
+		// 	} else {
+		// 		myElement.className = "classA";
+		// 	}
+		// }
+		// window.onload = function() {
+		// 	document.getElementById("btn1").onclick = toggleClass;
+		// }
+	</script>
 </body>
 </html>

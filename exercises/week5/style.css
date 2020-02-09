@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Zhi+Mang+Xing&display=swap');
+		.classA {
+			width: 180px;
+			border: 3px solid black;
+            border-radius: 20%;
+			background-color: white;
+			color: red;
+			font:  normal 24px arial, helvetica, sans-serif;
+            margin: 20px 30px 40px 60px;
+			padding: 20px;
+		}
+		.classB {
+			width: 180px;
+			border: 3px dotted white;
+            border-radius: 50%;
+			background-color: black;
+			color: yellow;
+			font: italic bold 24px "Times New Roman", serif;
+            font-family: 'Dancing Script', cursive;
+            margin: 10px 20px 10px 20px;
+			padding: 40px;
+		}
